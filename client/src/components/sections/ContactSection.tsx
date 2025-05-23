@@ -228,7 +228,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-neutral">Локация</h4>
-                    <p className="text-neutral/70">ул. Сърдечна Грижа 123, ет. 4<br />София, 1000</p>
+                    <p className="text-neutral/70">гр. Левски, ул. "Н. Вапцаров" №5</p>
                   </div>
                 </div>
                 
@@ -267,7 +267,7 @@ const ContactSection: React.FC = () => {
             
             <div className="bg-white rounded-xl shadow-lg overflow-hidden h-80">
               <Map 
-                address="Сърдечна Грижа 123, София, България" 
+                address="гр. Левски, ул. Н. Вапцаров 5, България" 
                 className="w-full h-full"
               />
             </div>

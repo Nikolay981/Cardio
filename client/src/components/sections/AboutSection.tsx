@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { UserCircle2, Award, GraduationCap } from "lucide-react";
+import doctorImage from "../../assets/doctor.jpg";
 
 const AboutSection: React.FC = () => {
   return (
@@ -60,8 +61,8 @@ const AboutSection: React.FC = () => {
             transition={{ duration: 0.7 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=800" 
-              alt="Портрет на Д-р Сара Джонсън" 
+              src={doctorImage} 
+              alt="Портрет на Д-р Ася Янакиева" 
               className="rounded-lg shadow-xl h-auto max-w-full object-cover" 
             />
           </motion.div>
