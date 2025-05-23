@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import doctorImage from "../../assets/doctor.jpg";
 
 const HeroSection: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const HeroSection: React.FC = () => {
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Модерни грижи за сърцето с личен подход</h1>
             <p className="text-lg md:text-xl mb-8 opacity-90">
-              Специализирани кардиологични грижи, съобразени с вашите уникални нужди от Д-р Сара Джонсън, сертифициран кардиолог.
+              Специализирани кардиологични грижи, съобразени с вашите уникални нужди от Д-р Ася Янакиева, сертифициран кардиолог.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
@@ -39,8 +40,8 @@ const HeroSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=700" 
-              alt="Д-р Сара Джонсън, Кардиолог" 
+              src={doctorImage} 
+              alt="Д-р Ася Янакиева, Кардиолог" 
               className="rounded-lg shadow-2xl h-auto max-w-full" 
             />
           </motion.div>

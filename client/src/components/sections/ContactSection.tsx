@@ -267,7 +267,7 @@ const ContactSection: React.FC = () => {
             
             <div className="bg-white rounded-xl shadow-lg overflow-hidden h-80">
               <Map 
-                address="гр. Левски, ул. Н. Вапцаров 5, България" 
+                address="Левски Център, ул. Драва 5, България" 
                 className="w-full h-full"
               />
             </div>
