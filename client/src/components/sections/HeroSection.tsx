@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
             <img 
               src={doctorImage} 
               alt="Д-р Ася Янакиева, Кардиолог" 
-              className="rounded-lg shadow-2xl h-auto max-w-full" 
+              className="rounded-lg shadow-2xl h-auto w-64 md:w-80" 
             />
           </motion.div>
         </div>
