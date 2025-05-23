@@ -1,6 +1,4 @@
 import { users, appointments, type User, type InsertUser, type Appointment, type InsertAppointment } from "@shared/schema";
-import { db } from "./db";
-import { eq } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
@@ -10,36 +8,52 @@ export interface IStorage {
   getAllAppointments(): Promise<Appointment[]>;
 }
 
-export class DatabaseStorage implements IStorage {
+export class MemStorage implements IStorage {
+  private users: Map<number, User>;
+  private appointments: Map<number, Appointment>;
+  private userCurrentId: number;
+  private appointmentCurrentId: number;
+
+  constructor() {
+    this.users = new Map();
+    this.appointments = new Map();
+    this.userCurrentId = 1;
+    this.appointmentCurrentId = 1;
+  }
+
   async getUser(id: number): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.id, id));
-    return user || undefined;
+    return this.users.get(id);
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.username, username));
-    return user || undefined;
+    return Array.from(this.users.values()).find(
+      (user) => user.username === username,
+    );
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const [user] = await db
-      .insert(users)
-      .values(insertUser)
-      .returning();
+    const id = this.userCurrentId++;
+    const user: User = { ...insertUser, id };
+    this.users.set(id, user);
     return user;
   }
 
   async createAppointment(appointment: InsertAppointment): Promise<Appointment> {
-    const [newAppointment] = await db
-      .insert(appointments)
-      .values(appointment)
-      .returning();
+    const id = this.appointmentCurrentId++;
+    const now = new Date();
+    const newAppointment: Appointment = { 
+      ...appointment, 
+      id, 
+      createdAt: now,
+      processed: false 
+    };
+    this.appointments.set(id, newAppointment);
     return newAppointment;
   }
 
   async getAllAppointments(): Promise<Appointment[]> {
-    return await db.select().from(appointments);
+    return Array.from(this.appointments.values());
   }
 }
 
-export const storage = new DatabaseStorage();
+export const storage = new MemStorage();
