@@ -14,12 +14,12 @@ const AboutSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral mb-6">About Dr. Sarah Johnson</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral mb-6">За Д-р Сара Джонсън</h2>
             <p className="text-lg text-neutral/70 mb-6">
-              Dr. Sarah Johnson is a board-certified cardiologist with over 15 years of experience in diagnosing and treating heart conditions. She completed her medical degree at Harvard Medical School, followed by residency at Massachusetts General Hospital and a fellowship in Cardiology at Cleveland Clinic.
+              Д-р Сара Джонсън е сертифициран кардиолог с над 15 години опит в диагностицирането и лечението на сърдечни заболявания. Тя е завършила медицинското си образование в Харвардския медицински университет, след което е специализирала в Общата болница на Масачузетс и е била стипендиант по Кардиология в Кливландската клиника.
             </p>
             <p className="text-lg text-neutral/70 mb-8">
-              Dr. Johnson specializes in preventive cardiology and women's heart health. Her patient-centered approach focuses on personalized care plans that incorporate the latest evidence-based treatments while considering each patient's unique circumstances.
+              Д-р Джонсън се специализира в превантивна кардиология и грижа за женското сърдечно здраве. Нейният подход, насочен към пациента, се фокусира върху персонализирани планове за грижи, които включват най-новите лечения, базирани на доказателства, като същевременно отчитат уникалните обстоятелства на всеки пациент.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center">
@@ -27,8 +27,8 @@ const AboutSection: React.FC = () => {
                   <UserCircle2 className="text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold">Board Certified</h4>
-                  <p className="text-sm text-neutral/70">American Board of Cardiology</p>
+                  <h4 className="font-bold">Сертифициран</h4>
+                  <p className="text-sm text-neutral/70">Американски борд по кардиология</p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -36,8 +36,8 @@ const AboutSection: React.FC = () => {
                   <Award className="text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold">15+ Years</h4>
-                  <p className="text-sm text-neutral/70">Clinical Experience</p>
+                  <h4 className="font-bold">15+ Години</h4>
+                  <p className="text-sm text-neutral/70">Клиничен опит</p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -45,8 +45,8 @@ const AboutSection: React.FC = () => {
                   <GraduationCap className="text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-bold">Harvard Medical School</h4>
-                  <p className="text-sm text-neutral/70">Medical Degree</p>
+                  <h4 className="font-bold">Харвардски медицински университет</h4>
+                  <p className="text-sm text-neutral/70">Медицинска степен</p>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ const AboutSection: React.FC = () => {
           >
             <img 
               src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=800" 
-              alt="Portrait of Dr. Sarah Johnson" 
+              alt="Портрет на Д-р Сара Джонсън" 
               className="rounded-lg shadow-xl h-auto max-w-full object-cover" 
             />
           </motion.div>

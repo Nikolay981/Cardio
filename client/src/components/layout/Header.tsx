@@ -42,18 +42,18 @@ const Header: React.FC = () => {
               <i className="fas fa-heartbeat text-2xl"></i>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-primary">Dr. Sarah Johnson</h1>
-              <p className="text-sm text-neutral/70">Cardiology Specialist</p>
+              <h1 className="text-xl font-bold text-primary">Д-р Сара Джонсън</h1>
+              <p className="text-sm text-neutral/70">Кардиолог специалист</p>
             </div>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-neutral hover:text-primary font-medium transition-colors">Home</a>
-            <a href="#services" className="text-neutral hover:text-primary font-medium transition-colors">Services</a>
-            <a href="#about" className="text-neutral hover:text-primary font-medium transition-colors">About</a>
-            <a href="#hours" className="text-neutral hover:text-primary font-medium transition-colors">Hours</a>
-            <a href="#contact" className="text-neutral hover:text-primary font-medium transition-colors">Contact</a>
+            <a href="#home" className="text-neutral hover:text-primary font-medium transition-colors">Начало</a>
+            <a href="#services" className="text-neutral hover:text-primary font-medium transition-colors">Услуги</a>
+            <a href="#about" className="text-neutral hover:text-primary font-medium transition-colors">За нас</a>
+            <a href="#hours" className="text-neutral hover:text-primary font-medium transition-colors">Работно време</a>
+            <a href="#contact" className="text-neutral hover:text-primary font-medium transition-colors">Контакти</a>
           </nav>
           
           {/* Mobile Menu Button */}
@@ -78,35 +78,35 @@ const Header: React.FC = () => {
               className="block px-3 py-2 rounded-md text-base font-medium text-neutral hover:bg-primary/10 hover:text-primary"
               onClick={closeMenu}
             >
-              Home
+              Начало
             </a>
             <a 
               href="#services" 
               className="block px-3 py-2 rounded-md text-base font-medium text-neutral hover:bg-primary/10 hover:text-primary"
               onClick={closeMenu}
             >
-              Services
+              Услуги
             </a>
             <a 
               href="#about" 
               className="block px-3 py-2 rounded-md text-base font-medium text-neutral hover:bg-primary/10 hover:text-primary"
               onClick={closeMenu}
             >
-              About
+              За нас
             </a>
             <a 
               href="#hours" 
               className="block px-3 py-2 rounded-md text-base font-medium text-neutral hover:bg-primary/10 hover:text-primary"
               onClick={closeMenu}
             >
-              Hours
+              Работно време
             </a>
             <a 
               href="#contact" 
               className="block px-3 py-2 rounded-md text-base font-medium text-neutral hover:bg-primary/10 hover:text-primary"
               onClick={closeMenu}
             >
-              Contact
+              Контакти
             </a>
           </div>
         </div>

@@ -2,86 +2,86 @@ import { Service, WorkingHour, SpecialNote, Testimonial } from "./types";
 
 export const services: Service[] = [
   {
-    title: "Cardiac Consultation",
-    description: "Comprehensive evaluation of your heart health with personalized treatment plans and recommendations.",
+    title: "Кардиологична консултация",
+    description: "Всеобхватна оценка на здравето на сърцето ви с персонализирани планове за лечение и препоръки.",
     icon: "stethoscope"
   },
   {
-    title: "ECG & Stress Tests",
-    description: "State-of-the-art electrocardiogram and stress testing to evaluate heart function and diagnose conditions.",
+    title: "ЕКГ и стрес тестове",
+    description: "Съвременна електрокардиограма и стрес тестове за оценка на сърдечната функция и диагностициране на състояния.",
     icon: "heartbeat"
   },
   {
-    title: "Echocardiography",
-    description: "Advanced cardiac imaging to visualize heart structure and function using ultrasound technology.",
+    title: "Ехокардиография",
+    description: "Модерно сърдечно изследване за визуализиране на структурата и функцията на сърцето с ултразвукова технология.",
     icon: "heart"
   },
   {
-    title: "Medication Management",
-    description: "Ongoing monitoring and adjustment of cardiac medications to optimize treatment effectiveness.",
+    title: "Управление на медикаменти",
+    description: "Текущо проследяване и корекция на сърдечните лекарства за оптимизиране на ефективността на лечението.",
     icon: "pills"
   },
   {
-    title: "Lifestyle Counseling",
-    description: "Personalized guidance on diet, exercise, and lifestyle modifications to improve heart health.",
+    title: "Съвети за начин на живот",
+    description: "Персонализирани насоки за диета, упражнения и промени в начина на живот за подобряване на здравето на сърцето.",
     icon: "apple"
   },
   {
-    title: "Cardiac Risk Assessment",
-    description: "Comprehensive evaluation of your cardiac risk factors with personalized prevention strategies.",
+    title: "Оценка на сърдечния риск",
+    description: "Всеобхватна оценка на рисковите фактори за сърцето с персонализирани превантивни стратегии.",
     icon: "file-medical"
   }
 ];
 
 export const workingHours: WorkingHour[] = [
-  { day: "Monday", hours: "8:00 AM - 5:00 PM" },
-  { day: "Tuesday", hours: "8:00 AM - 5:00 PM" },
-  { day: "Wednesday", hours: "9:00 AM - 6:00 PM" },
-  { day: "Thursday", hours: "8:00 AM - 5:00 PM" },
-  { day: "Friday", hours: "8:00 AM - 4:00 PM" },
-  { day: "Saturday", hours: "9:00 AM - 1:00 PM" },
-  { day: "Sunday", hours: "Closed" }
+  { day: "Понеделник", hours: "8:00 - 17:00" },
+  { day: "Вторник", hours: "8:00 - 17:00" },
+  { day: "Сряда", hours: "9:00 - 18:00" },
+  { day: "Четвъртък", hours: "8:00 - 17:00" },
+  { day: "Петък", hours: "8:00 - 16:00" },
+  { day: "Събота", hours: "9:00 - 13:00" },
+  { day: "Неделя", hours: "Затворено" }
 ];
 
 export const specialNotes: SpecialNote[] = [
   {
-    title: "Lunch Break",
-    description: "12:30 PM - 1:30 PM (Monday-Friday)",
+    title: "Обедна почивка",
+    description: "12:30 - 13:30 (Понеделник-Петък)",
     type: "info"
   },
   {
-    title: "Early Appointments",
-    description: "Available upon request (7:00 AM - 8:00 AM)",
+    title: "Ранни часове",
+    description: "Възможни при заявка (7:00 - 8:00)",
     type: "info"
   },
   {
-    title: "Telehealth",
-    description: "Virtual appointments available throughout the week",
+    title: "Телемедицина",
+    description: "Виртуални консултации през цялата седмица",
     type: "info"
   },
   {
-    title: "Holiday Schedule",
-    description: "Please call for modified hours during holidays",
+    title: "Празнично разписание",
+    description: "Моля, обадете се за промени в работното време по време на празници",
     type: "warning"
   }
 ];
 
 export const testimonials: Testimonial[] = [
   {
-    text: "Dr. Johnson took the time to listen to all of my concerns. She explained my condition and treatment options clearly, making me feel comfortable throughout the process.",
-    name: "Robert M.",
+    text: "Д-р Джонсън отдели време да изслуша всичките ми притеснения. Тя обясни състоянието ми и възможностите за лечение ясно, карайки ме да се чувствам комфортно през целия процес.",
+    name: "Роберт М.",
     fullStars: 5,
     hasHalfStar: false
   },
   {
-    text: "After several inconclusive visits elsewhere, Dr. Johnson diagnosed my condition quickly. Her expertise and compassionate approach made a difficult time much easier to navigate.",
-    name: "Jennifer K.",
+    text: "След няколко несигурни посещения другаде, д-р Джонсън диагностицира състоянието ми бързо. Нейният опит и състрадателен подход направиха трудния период много по-лесен за преодоляване.",
+    name: "Дженифър К.",
     fullStars: 5,
     hasHalfStar: false
   },
   {
-    text: "I've been a patient for over 5 years. Dr. Johnson always stays current with the latest cardiac treatments and takes a holistic approach to my care. Highly recommended!",
-    name: "David T.",
+    text: "Аз съм пациент от над 5 години. Д-р Джонсън винаги е в крак с най-новите сърдечни лечения и има холистичен подход към грижите ми. Силно препоръчвам!",
+    name: "Давид Т.",
     fullStars: 4,
     hasHalfStar: true
   }

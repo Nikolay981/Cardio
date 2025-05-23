@@ -36,7 +36,7 @@ const TestimonialsSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Patient Testimonials
+            Отзиви на пациенти
           </motion.h2>
           <motion.p 
             className="text-lg text-neutral/70 max-w-3xl mx-auto"
@@ -45,7 +45,7 @@ const TestimonialsSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            See what our patients have to say about their care experience.
+            Вижте какво казват нашите пациенти за своя опит с нас.
           </motion.p>
         </div>
         

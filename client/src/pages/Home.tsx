@@ -11,12 +11,12 @@ import ContactSection from "@/components/sections/ContactSection";
 const Home: React.FC = () => {
   useEffect(() => {
     // Set page title and meta description for SEO
-    document.title = "Dr. Sarah Johnson - Cardiology Specialist";
+    document.title = "Д-р Сара Джонсън - Кардиолог специалист";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Dr. Sarah Johnson provides compassionate cardiac care with cutting-edge treatments. Schedule an appointment today for expert cardiology services."
+        "Д-р Сара Джонсън предлага състрадателни грижи за сърцето с най-съвременни лечения. Запишете час днес за експертни кардиологични услуги."
       );
     }
     

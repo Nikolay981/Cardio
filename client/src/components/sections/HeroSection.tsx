@@ -12,22 +12,22 @@ const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Advanced Heart Care With a Personal Touch</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Модерни грижи за сърцето с личен подход</h1>
             <p className="text-lg md:text-xl mb-8 opacity-90">
-              Specialized cardiac care tailored to your unique needs with Dr. Sarah Johnson, a board-certified cardiologist.
+              Специализирани кардиологични грижи, съобразени с вашите уникални нужди от Д-р Сара Джонсън, сертифициран кардиолог.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a 
                 href="#contact" 
                 className="bg-white text-primary font-medium px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all text-center"
               >
-                Schedule Appointment
+                Запишете час
               </a>
               <a 
                 href="#hours" 
                 className="bg-transparent border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white/10 transition-all text-center"
               >
-                View Office Hours
+                Работно време
               </a>
             </div>
           </motion.div>
@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
           >
             <img 
               src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=700" 
-              alt="Dr. Sarah Johnson, Cardiologist" 
+              alt="Д-р Сара Джонсън, Кардиолог" 
               className="rounded-lg shadow-2xl h-auto max-w-full" 
             />
           </motion.div>

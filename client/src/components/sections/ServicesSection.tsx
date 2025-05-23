@@ -55,7 +55,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Our Cardiac Services
+            Нашите Кардиологични Услуги
           </motion.h2>
           <motion.p 
             className="text-lg text-neutral/70 max-w-3xl mx-auto"
@@ -64,7 +64,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Comprehensive cardiovascular care using the latest diagnostic and treatment technologies to keep your heart healthy.
+            Всеобхватни сърдечно-съдови грижи, използващи най-новите диагностични и лечебни технологии за поддържане на сърцето ви здраво.
           </motion.p>
         </div>
         

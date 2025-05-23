@@ -17,7 +17,7 @@ const WorkingHoursSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              Office Hours
+              Работно Време
             </motion.h2>
             <motion.p 
               className="text-lg text-neutral/70"
@@ -26,7 +26,7 @@ const WorkingHoursSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              We offer flexible scheduling to accommodate our patients' needs. Same-day appointments are available for urgent cardiac concerns.
+              Предлагаме гъвкаво насрочване на часове, за да отговорим на нуждите на нашите пациенти. Възможни са и часове за същия ден при спешни сърдечни проблеми.
             </motion.p>
           </div>
           
@@ -40,7 +40,7 @@ const WorkingHoursSection: React.FC = () => {
             <div className="flex flex-col md:flex-row">
               <div className="w-full md:w-1/2 md:border-r border-gray-200 md:pr-8 mb-8 md:mb-0">
                 <h3 className="text-xl font-semibold mb-6 flex items-center text-neutral">
-                  <Clock className="text-primary mr-3" /> Regular Office Hours
+                  <Clock className="text-primary mr-3" /> Редовно Работно Време
                 </h3>
                 <div className="grid grid-cols-[1fr_auto] gap-x-8 gap-y-2 text-lg">
                   {workingHours.map((day, index) => (
@@ -54,7 +54,7 @@ const WorkingHoursSection: React.FC = () => {
               
               <div className="w-full md:w-1/2 md:pl-8">
                 <h3 className="text-xl font-semibold mb-6 flex items-center text-neutral">
-                  <Info className="text-primary mr-3" /> Special Hours & Notes
+                  <Info className="text-primary mr-3" /> Специални Часове и Бележки
                 </h3>
                 <ul className="space-y-4 text-neutral/70">
                   {specialNotes.map((note, index) => (
@@ -73,7 +73,7 @@ const WorkingHoursSection: React.FC = () => {
                 </ul>
                 <div className="mt-8 pt-6 border-t border-gray-200">
                   <a href="#contact" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
-                    Schedule an appointment
+                    Запишете час
                     <svg className="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
@@ -95,8 +95,8 @@ const WorkingHoursSection: React.FC = () => {
                 <Phone className="text-accent" />
               </div>
               <div>
-                <h4 className="font-bold text-neutral">Need urgent cardiac care?</h4>
-                <p className="text-neutral/70">Call our priority line for immediate assistance</p>
+                <h4 className="font-bold text-neutral">Нужда от спешна сърдечна помощ?</h4>
+                <p className="text-neutral/70">Обадете се на нашата приоритетна линия за незабавна помощ</p>
               </div>
             </div>
             <a href="tel:+18005551234" className="bg-accent text-white font-medium px-5 py-3 rounded-lg hover:bg-accent/90 transition-colors whitespace-nowrap">
