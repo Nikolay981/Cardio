@@ -15,11 +15,11 @@ import { useQueryClient } from "@tanstack/react-query";
 import Map from "@/components/ui/map";
 
 const formSchema = z.object({
-  firstName: z.string().min(2, { message: "First name must be at least 2 characters" }),
-  lastName: z.string().min(2, { message: "Last name must be at least 2 characters" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  phone: z.string().min(10, { message: "Please enter a valid phone number" }),
-  reason: z.string({ required_error: "Please select a reason for your visit" }),
+  firstName: z.string().min(2, { message: "Името трябва да е поне 2 символа" }),
+  lastName: z.string().min(2, { message: "Фамилията трябва да е поне 2 символа" }),
+  email: z.string().email({ message: "Моля, въведете валиден имейл адрес" }),
+  phone: z.string().min(10, { message: "Моля, въведете валиден телефонен номер" }),
+  reason: z.string({ required_error: "Моля, изберете причина за посещението" }),
   message: z.string().optional(),
 });
 
@@ -47,16 +47,16 @@ const ContactSection: React.FC = () => {
     try {
       await apiRequest("POST", "/api/appointment", data);
       toast({
-        title: "Appointment requested",
-        description: "We've received your appointment request and will contact you shortly.",
+        title: "Заявката е изпратена",
+        description: "Получихме вашата заявка за час и ще се свържем с вас скоро.",
         variant: "success",
       });
       form.reset();
       queryClient.invalidateQueries({ queryKey: ["/api/appointments"] });
     } catch (error) {
       toast({
-        title: "Something went wrong",
-        description: "There was an error submitting your appointment request. Please try again.",
+        title: "Възникна грешка",
+        description: "Имаше грешка при изпращането на вашата заявка. Моля, опитайте отново.",
         variant: "destructive",
       });
     } finally {
@@ -75,7 +75,7 @@ const ContactSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Contact Us
+            Свържете се с нас
           </motion.h2>
           <motion.p 
             className="text-lg text-neutral/70 max-w-3xl mx-auto"
@@ -84,7 +84,7 @@ const ContactSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            We're here to answer your questions and schedule your appointments. Reach out to us in the way that's most convenient for you.
+            Ние сме тук, за да отговорим на вашите въпроси и да планираме вашите посещения. Свържете се с нас по начина, който е най-удобен за вас.
           </motion.p>
         </div>
         
@@ -97,7 +97,7 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="bg-white rounded-xl shadow-lg p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6 text-neutral">Schedule an Appointment</h3>
+              <h3 className="text-2xl font-bold mb-6 text-neutral">Запишете час</h3>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -106,7 +106,7 @@ const ContactSection: React.FC = () => {
                       name="firstName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-neutral/70">First Name</FormLabel>
+                          <FormLabel className="text-neutral/70">Име</FormLabel>
                           <FormControl>
                             <Input {...field} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary" />
                           </FormControl>
@@ -119,7 +119,7 @@ const ContactSection: React.FC = () => {
                       name="lastName"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-neutral/70">Last Name</FormLabel>
+                          <FormLabel className="text-neutral/70">Фамилия</FormLabel>
                           <FormControl>
                             <Input {...field} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary" />
                           </FormControl>
@@ -134,7 +134,7 @@ const ContactSection: React.FC = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-neutral/70">Email Address</FormLabel>
+                        <FormLabel className="text-neutral/70">Имейл адрес</FormLabel>
                         <FormControl>
                           <Input {...field} type="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary" />
                         </FormControl>
@@ -148,7 +148,7 @@ const ContactSection: React.FC = () => {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-neutral/70">Phone Number</FormLabel>
+                        <FormLabel className="text-neutral/70">Телефонен номер</FormLabel>
                         <FormControl>
                           <Input {...field} type="tel" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary" />
                         </FormControl>
@@ -162,20 +162,20 @@ const ContactSection: React.FC = () => {
                     name="reason"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-neutral/70">Reason for Visit</FormLabel>
+                        <FormLabel className="text-neutral/70">Причина за посещението</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
                             <SelectTrigger className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary">
-                              <SelectValue placeholder="Select a reason" />
+                              <SelectValue placeholder="Изберете причина" />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="new-consultation">New Patient Consultation</SelectItem>
-                            <SelectItem value="follow-up">Follow-up Appointment</SelectItem>
-                            <SelectItem value="ecg">ECG or Stress Test</SelectItem>
-                            <SelectItem value="medication">Medication Review</SelectItem>
-                            <SelectItem value="emergency">Urgent Cardiac Concern</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
+                            <SelectItem value="new-consultation">Консултация на нов пациент</SelectItem>
+                            <SelectItem value="follow-up">Последващ преглед</SelectItem>
+                            <SelectItem value="ecg">ЕКГ или стрес тест</SelectItem>
+                            <SelectItem value="medication">Преглед на медикаменти</SelectItem>
+                            <SelectItem value="emergency">Спешен сърдечен проблем</SelectItem>
+                            <SelectItem value="other">Друго</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -188,7 +188,7 @@ const ContactSection: React.FC = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-neutral/70">Additional Information</FormLabel>
+                        <FormLabel className="text-neutral/70">Допълнителна информация</FormLabel>
                         <FormControl>
                           <Textarea 
                             {...field} 
@@ -206,7 +206,7 @@ const ContactSection: React.FC = () => {
                     className="w-full bg-primary text-white font-medium py-3 px-6 rounded-lg hover:bg-primary/90"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Submitting..." : "Request Appointment"}
+                    {isSubmitting ? "Изпращане..." : "Заявете час"}
                   </Button>
                 </form>
               </Form>
@@ -221,15 +221,15 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h3 className="text-2xl font-bold mb-6 text-neutral">Office Information</h3>
+              <h3 className="text-2xl font-bold mb-6 text-neutral">Информация за офиса</h3>
               <div className="space-y-6">
                 <div className="flex">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <MapPin className="text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-neutral">Location</h4>
-                    <p className="text-neutral/70">123 Heartcare Avenue, Suite 400<br />Metropolis, CA 90210</p>
+                    <h4 className="font-bold text-neutral">Локация</h4>
+                    <p className="text-neutral/70">ул. Сърдечна Грижа 123, ет. 4<br />София, 1000</p>
                   </div>
                 </div>
                 
@@ -238,8 +238,8 @@ const ContactSection: React.FC = () => {
                     <PhoneCall className="text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-neutral">Phone</h4>
-                    <p className="text-neutral/70">Main: (555) 123-4567<br />Urgent: (800) 555-1234</p>
+                    <h4 className="font-bold text-neutral">Телефон</h4>
+                    <p className="text-neutral/70">Основен: (02) 123-4567<br />Спешен: (02) 555-1234</p>
                   </div>
                 </div>
                 
@@ -248,7 +248,7 @@ const ContactSection: React.FC = () => {
                     <Mail className="text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-neutral">Email</h4>
+                    <h4 className="font-bold text-neutral">Имейл</h4>
                     <p className="text-neutral/70">appointments@drjohnsoncardiology.com<br />info@drjohnsoncardiology.com</p>
                   </div>
                 </div>
@@ -258,9 +258,9 @@ const ContactSection: React.FC = () => {
                     <FileText className="text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-neutral">Patient Portal</h4>
-                    <p className="text-neutral/70">Access your records and test results through our secure patient portal.</p>
-                    <a href="#" className="text-primary font-medium hover:text-primary/80 transition-colors">Login to Portal</a>
+                    <h4 className="font-bold text-neutral">Пациентски портал</h4>
+                    <p className="text-neutral/70">Достъп до вашите медицински записи и резултати от изследвания чрез нашия сигурен пациентски портал.</p>
+                    <a href="#" className="text-primary font-medium hover:text-primary/80 transition-colors">Вход в портала</a>
                   </div>
                 </div>
               </div>
@@ -268,7 +268,7 @@ const ContactSection: React.FC = () => {
             
             <div className="bg-white rounded-xl shadow-lg overflow-hidden h-80">
               <Map 
-                address="123 Heartcare Avenue, Metropolis, CA 90210" 
+                address="Сърдечна Грижа 123, София, България" 
                 className="w-full h-full"
               />
             </div>
