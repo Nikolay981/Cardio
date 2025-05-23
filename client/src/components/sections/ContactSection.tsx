@@ -49,7 +49,6 @@ const ContactSection: React.FC = () => {
       toast({
         title: "Заявката е изпратена",
         description: "Получихме вашата заявка за час и ще се свържем с вас скоро.",
-        variant: "success",
       });
       form.reset();
       queryClient.invalidateQueries({ queryKey: ["/api/appointments"] });
