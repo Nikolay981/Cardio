@@ -13,8 +13,8 @@ const Footer: React.FC = () => {
                 <i className="fas fa-heartbeat text-2xl"></i>
               </div>
               <div>
-                <h2 className="text-xl font-bold">Dr. Sarah Johnson</h2>
-                <p className="text-sm text-white/70">Cardiology Specialist</p>
+                <h2 className="text-xl font-bold">Д-р Ася Янакиева</h2>
+                <p className="text-sm text-white/70">Кардиолог специалист</p>
               </div>
             </div>
             <p className="text-white/70 mb-6">

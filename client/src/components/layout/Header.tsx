@@ -42,7 +42,7 @@ const Header: React.FC = () => {
               <i className="fas fa-heartbeat text-2xl"></i>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-primary">Д-р Сара Джонсън</h1>
+              <h1 className="text-xl font-bold text-primary">Д-р Ася Янакиева</h1>
               <p className="text-sm text-neutral/70">Кардиолог специалист</p>
             </div>
           </div>
